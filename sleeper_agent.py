@@ -45,8 +45,9 @@ if __name__ == "__main__":
         data.select_poisons(model, args.poison_selection_strategy)
 
     poison_delta = witch.brew(model, data)
+    data.export_poison(poison_delta, 'cifar10_delta', mode='full')
     craft_time = time.time()
-
+    
     # Optional: apply a filtering defense
     if args.filter_defense != '':
         if args.scenario == 'from-scratch':
