@@ -1,8 +1,9 @@
 #!/bin/bash
 
 python sleeper_agent.py \
-    --patch_size 3 \
-    --budget 0.0005 \
+    --patch_size 8 \
+    --budget 0.01 \
+    --eps 16 \
     --pbatch 128 \
     --epochs 80 \
     --sources 50 \
